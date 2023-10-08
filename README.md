@@ -7,6 +7,21 @@
 - Giannina Di Bello
 - Jacqueline Hernández
 
+## How to run
+Download the executables [here](https://github.com/jestemc/eclipse_adventure/tree/1.2.0) or run from source:
+```console
+cd ~/Downloads/
+
+# Download and extract Renpy
+wget https://www.renpy.org/dl/8.1.3/renpy-8.1.3-sdk.tar.bz2
+sudo tar -xf renpy-8.1.3-sdk.tar.bz2
+
+# Download the game source code
+git clone git@github.com:jestemc/eclipse_adventure.git
+
+# Use Renpy to run the game
+renpy-8.1.3-sdk/renpy.sh eclipse_adventure
+```
 
 ## High-level Summary
 The graphic novel is conceptually designed to educate children aged 10 and up about the wonders of the cosmos, more specifically, the marvels of eclipses. This is achieved through a story with images (graphic novel) aimed at capturing their attention. This is our attempt at a solution to the challenge, which was to create a story, game, or graphic novel about eclipses. We chose the latter because it's more engaging when providing information about eclipses. This is important as it can inspire younger individuals to become interested in the mysteries and wonders of the cosmos, serving as a small gateway into this marvelous world.
