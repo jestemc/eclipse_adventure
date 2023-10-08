@@ -17,6 +17,7 @@ image eclipse_6 = "eclipse_6.jpg"
 image eclipse_7 = "eclipse_7.jpg"
 image you_lost = "you_lost.png"
 image space_station = "space_station.jpg"
+image the_end = "the_end.png"
 
 transform pan_up:
     ypos -1300
@@ -212,5 +213,7 @@ label start:
     "For a moment The Professor seemed to see right through [student_name]! He felt chills down his spine."
 
     teacher "I am a very busy AI, but I will grant you a few minutes if you have questions..."
+
+    show the_end
 
     return
