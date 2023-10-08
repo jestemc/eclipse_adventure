@@ -9,7 +9,7 @@
 
 ## How to run
 Download the executables [here](https://github.com/jestemc/eclipse_adventure/tree/1.2.0) or run from source:
-```console
+```bash
 cd ~/Downloads/
 
 # Download and extract Renpy
