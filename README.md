@@ -24,7 +24,7 @@ Yes, we used chatgpt to ask question about the differents pages we could use to 
 ## References
 ### Space Agency Data
 - [Science Nasa Eclipses](https://science.nasa.gov/eclipses/)
-- [More Science Nasa Eclipses](research https://science.nasa.gov/eclipses/nasa-research/)
+- [Science Nasa Eclipse Research]( https://science.nasa.gov/eclipses/nasa-research/)
 - [Science Nasa Eclipses Types](https://science.nasa.gov/eclipses/types/)
 - [Nasa Eclipses Images](https://images.nasa.gov/search?q=eclipse)
 
