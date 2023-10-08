@@ -1,19 +1,26 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
+﻿
 define teacher = Character("The Professor", image="teacher")
 define student = Character("[student_name]", image="student")
 image teacher = im.FactorScale("robot_teacher.png", 1.3)
 image teacher big = im.FactorScale("robot_teacher.png", 1.5)
 image student = im.FactorScale("silueta_nino.png", 1.3)
 
+
 image planetarium = "planetarium.jpg"
+image inside_planetarium = "inside_planetarium.jpg"
 image eclipse_1 = "eclipse_1.jpg"
+image eclipse_2 = "eclipse_2.png"
+image eclipse_3 = "eclipse_3.jpg"
+image eclipse_4 = "eclipse_4.jpg"
+image eclipse_5 = "eclipse_5.jpg"
+image eclipse_6 = "eclipse_6.jpg"
+image eclipse_7 = "eclipse_7.jpg"
 image you_lost = "you_lost.png"
 image space_station = "space_station.jpg"
 
+transform pan_up:
+    ypos -1300
+    linear 8 ypos 0
 
 label start:
     python:
@@ -36,11 +43,10 @@ label start:
     "This robot is known for being grumpy, demanding, and very impatient."
     hide teacher big
 
-    
-    show student at center
     "This story is centered around [student_name], who along with their classmates, went to the Great Observatory on a school trip."
-    hide student
 
+    scene inside_planetarium at pan_up
+    pause 8
     "Inside the Great Observatory, they were greeted rudely by The Professor, who introduced himself with an air of superiority, seeing the group as mere ignorant children."
 
     show teacher at right
@@ -84,7 +90,7 @@ label start:
     show teacher at right
     # These display lines of dialogue.
     label .first_question:
-    "First question: When you look up into the sky and witness an exlipse, do you know how this phenomenon occurs?"
+    "First question: When you look up into the sky and witness an eclipse, do you know how this phenomenon occurs?"
     menu: 
         "Due to the Earth's rotation.":
             "Incorrect! Try again."
@@ -98,6 +104,7 @@ label start:
             "Incorrect! Try again"
             jump .first_question
 
+    show eclipse_2
     "Second question: If an eclipse is occurring, why can only some Earthlings see it?"
     label .second_question:
     menu:
@@ -113,6 +120,7 @@ label start:
         "Because the cast shadow only covers part of the Earth.":
             "Correct!"
 
+    show eclipse_3
     "Third question: What mysterious force causes the Sun, Moon, and Earth to align?"
     label .third_question:
     menu:
@@ -128,6 +136,7 @@ label start:
             "Incorrect! Try again."
             jump .third_question
 
+    show eclipse_4
     "Fourth question: Humans, always observing the sky... How often do eclipses occur?"
     label .fourth_question:
     menu:
@@ -143,6 +152,7 @@ label start:
             "Incorrect! Try again."
             jump .fourth_question
 
+    show eclipse_5
     "Fifth question: Earthly scientists seem to know much. How do they predict when and where eclipses will occur?"
     label .fifth_question:
     menu:
@@ -158,6 +168,7 @@ label start:
             "Incorrect! Try again."
             jump .fifth_question
 
+    show eclipse_6
     "Sixth question: Prove to me you know the difference. What distinguishes a lunar eclipse from a solar eclipse?"
     label .sixth_question:
     menu:
@@ -173,6 +184,7 @@ label start:
             "Incorrect! Try again."
             jump .sixth_question
 
+    show eclipse_7
     "Seventh and final question: Humans talk about 'eclipse seasons' occurring twice a year. What are they, and why do they happen approximately every six months?"
     label .seventh_question:
     menu:
@@ -189,7 +201,7 @@ label start:
             jump .seventh_question
 
     label .lost_screen:
-    scene you_lost
+    # scene you_lost
     ""
 
     return
