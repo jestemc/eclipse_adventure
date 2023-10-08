@@ -1,4 +1,4 @@
-Sun Oct  8 16:09:10 2023
+Sun Oct  8 16:34:12 2023
 Linux-6.2.0-34-generic-x86_64-with-glibc2.35
 Ren'Py 8.1.3.23091805
  
@@ -7,7 +7,7 @@ Bootstrap to the start of init.init. took 0.02s
 Early init. took 0.00s
 Loader init. took 0.00s
 Loading error handling. took 0.02s
-Loading script. took 0.05s
+Loading script. took 0.09s
 Loading save slot metadata. took 0.02s
 Loading persistent. took 0.00s
 Running init code. took 0.02s
@@ -15,6 +15,7 @@ Loading analysis data. took 0.01s
 Analyze and compile ATL. took 0.00s
 Reloading save slot metadata. took 0.01s
 Index archives took 0.00s
+Backing up script files to '/home/juan/.renpy/backups/interstellar':
 Dump and make backups. took 0.00s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
@@ -24,12 +25,12 @@ Creating interface object. took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.02s
 Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
 Prepare screens took 0.04s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
 Interface start. took 0.08s
@@ -46,13 +47,6 @@ Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
 Maximum texture size: 4096x4096
 Screen sizes: virtual=(1920, 1080) physical=(1920, 1009) drawable=(1920, 1009)
 Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
 Traceback (most recent call last):
   File "/home/juan/Downloads/renpy-8.1.3-sdk/lib/py3-linux-x86_64/../../renpy.py", line 244, in <module>
     main()
@@ -68,23 +62,16 @@ Traceback (most recent call last):
     context.run()
   File "/home/juan/Downloads/renpy-8.1.3-sdk/renpy/execution.py", line 596, in run
     node.execute()
-  File "/home/juan/Downloads/renpy-8.1.3-sdk/renpy/ast.py", line 1138, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/home/juan/Downloads/renpy-8.1.3-sdk/renpy/python.py", line 1122, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00start.rpy", line 277, in <module>
-  File "/home/juan/Downloads/renpy-8.1.3-sdk/renpy/game.py", line 349, in call_in_new_context
-    return renpy.execution.run_context(False)
-  File "/home/juan/Downloads/renpy-8.1.3-sdk/renpy/execution.py", line 955, in run_context
-    context.run()
-  File "/home/juan/Downloads/renpy-8.1.3-sdk/renpy/execution.py", line 596, in run
-    node.execute()
-  File "/home/juan/Downloads/renpy-8.1.3-sdk/renpy/ast.py", line 1138, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/home/juan/Downloads/renpy-8.1.3-sdk/renpy/python.py", line 1122, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
-  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+  File "/home/juan/Downloads/renpy-8.1.3-sdk/renpy/ast.py", line 930, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "/home/juan/Downloads/renpy-8.1.3-sdk/renpy/exports.py", line 1474, in say
+    who(what, *args, **kwargs)
+  File "/home/juan/Downloads/renpy-8.1.3-sdk/renpy/character.py", line 1352, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "/home/juan/Downloads/renpy-8.1.3-sdk/renpy/character.py", line 1003, in do_display
+    display_say(who,
+  File "/home/juan/Downloads/renpy-8.1.3-sdk/renpy/character.py", line 693, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
   File "/home/juan/Downloads/renpy-8.1.3-sdk/renpy/ui.py", line 299, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "/home/juan/Downloads/renpy-8.1.3-sdk/renpy/display/core.py", line 3582, in interact

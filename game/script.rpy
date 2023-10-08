@@ -200,8 +200,17 @@ label start:
             "Incorrect! Try again."
             jump .seventh_question
 
-    label .lost_screen:
-    # scene you_lost
-    ""
+    scene inside_planetary
+    show teacher at right
+    show student at left
+
+    teacher "Oh, I see the someone is not as foolish as I thought."
+    teacher "Seeing you have answered all my questions correctly, you are free to go or explore MY observatory"
+
+    student "Will you answer my questions now?"
+
+    "For a moment The Professor seemed to see right through [student_name]! He felt chills down his spine."
+
+    teacher "I am a very busy AI, but I will grant you a few minutes if you have questions..."
 
     return
