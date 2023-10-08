@@ -3,26 +3,82 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+define teacher = Character("The Professor", image="teacher")
+define student = Character("[student_name]", image="student")
+image teacher = im.FactorScale("robot_teacher.png", 1.3)
+image teacher big = im.FactorScale("robot_teacher.png", 1.5)
+image student = im.FactorScale("silueta_nino.png", 1.3)
+
+image planetarium = "planetarium.jpg"
 image eclipse_1 = "eclipse_1.jpg"
-define teacher = Character("Robot Teacher", image="teacher")
-image teacher = "robot_teacher.png"
 image you_lost = "you_lost.png"
+image space_station = "space_station.jpg"
 
-
-# The game starts here.
 
 label start:
+    python:
+        debug = True
+        student_name = renpy.input("What is your name?", length=32) if not debug else ""
+        student_name = student_name.strip()
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+        if not student_name:
+            student_name = "Timmy"
 
-    scene bg room
+    show space_station
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    "In the year 2X23, planet Earth has advanced immensely in terms of technology to the point where all buildings are completely controlled by AIs, who have total access to information."
+
+    show planetarium
+    "This story presents the journey of a school group to the Great Observatory, an ancient and enormous building filled with books, holograms, and information about the stars."
+
+    show teacher big
+    "This old building is managed by The Professor, a robot as old as the building itself, created to learn and understand all the information available in the Great Observatory."
+    "This robot is known for being grumpy, demanding, and very impatient."
+    hide teacher big
+
+    
+    show student at center
+    "This story is centered around [student_name], who along with their classmates, went to the Great Observatory on a school trip."
+    hide student
+
+    "Inside the Great Observatory, they were greeted rudely by The Professor, who introduced himself with an air of superiority, seeing the group as mere ignorant children."
+
+    show teacher at right
+    teacher "Why have you come to MY observatory?"
+
+    show student at left
+    student "We heard there would be an eclipse tomorrow! We want to learn more about it!"
+
+    "Those words did not bring particular joy to that robot, who, rather than being excited about the possibility of sharing knowledge with younger minds, saw it as a nuisance. He already knew EVERYTHING, why should he have to teach it?"
+
+    teacher "Is that so?" 
+    teacher "You can learn about it in your school; it's a topic your teachers cover, isn't it?" 
+
+    student "But this is the Great Observatory! It has ultra-realistic models, holograms, and more! They say seeing the stars here is like seeing them for real!"
+
+    teacher "Nothing you can't see elsewhere."
+    teacher "If you'll excuse me, I have much more important matters that require my immediate attention."
+
+    "The Professor had many things he preferred to do rather than teach those he viewed as uncultured minds."
+    "If they wanted to know so badly, there was the school, the teachers, and other AIs for that. It was not his responsibility or desire to teach anyone."
+
+    student "But aren't you The Professor? The one who knows everything humanity knows about the stars and space?"
+    student "We asked to come here because it's the best place of all! Can't you spare us a few minutes at least?"
+
+    teacher "As I said before, I'm very busy, child."
+
+    "Despite The Professor's bad attitude, [student_name] decided to insist a little more. Of all the places they could have gone, they chose this one because they wanted to know what would happen tomorrow to appreciate it better, and they didn't plan to leave empty-handed."
+
+    student "Please, the eclipse is tomorrow!"
+
+    # TODO: make more dramatic
+    "Fed up, The Professor closed the windows and blocked the exits. If they wanted to know so badly, then it would be on his terms."
+
+    teacher "Let's see how much you know then, child. Let's see if you're worth my time."
+
+    "Turning his back to the children, The Professor approached the first panel and demanded..."
+
+    teacher "No one will go home until you tell me what I want to know."
 
     show eclipse_1
     show teacher at right
