@@ -25,7 +25,7 @@ transform pan_up:
 
 label start:
     python:
-        debug = True
+        debug = False
         student_name = renpy.input("What is your name?", length=32) if not debug else ""
         student_name = student_name.strip()
 
