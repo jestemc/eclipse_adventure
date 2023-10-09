@@ -8,7 +8,7 @@
 - Jacqueline Hernández
 
 ## How to run
-Download the executables [here](https://github.com/jestemc/eclipse_adventure/tree/1.2.0) or run from source:
+Download the executables [here](https://github.com/jestemc/eclipse_adventure/releases/latest) or run from source:
 ```bash
 cd ~/Downloads/
 
