@@ -5,7 +5,6 @@
 - [María Luque](https://www.linkedin.com/in/mar%C3%ADa-luque/)
 - [Juan Estevez](https://www.linkedin.com/in/juan-estevez-/) 
 - Giannina Di Bello
-- Jacqueline Hernández
 
 ## How to run
 Download the executables [here](https://github.com/jestemc/eclipse_adventure/releases/latest) or run from source:
